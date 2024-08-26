@@ -12,7 +12,7 @@ module ObservableRails
       @context = context
       if message.nil?
         require "awesome_print"
-        super(@context.ai(plain: true, indent: 2))
+        super(@context.ai(ruby19_syntax: true, plain: true, indent: 2))
       else
         super(message)
       end

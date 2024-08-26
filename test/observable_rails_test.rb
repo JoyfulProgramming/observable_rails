@@ -23,9 +23,9 @@ class TestObservableRailsStructuredError < Minitest::Test
 
     expected_message = <<~EXPECTED
       {
-        :key1 => "value1",
-        :key2 => {
-          :nested => "value2"
+        key1: "value1",
+        key2: {
+          nested: "value2"
         }
       }
     EXPECTED

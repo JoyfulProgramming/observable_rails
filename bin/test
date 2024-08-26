@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 
-bundle exec rspec "$@"
+system('clear') || system('cls')
+
+require_relative '../test/test_helper'

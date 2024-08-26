@@ -4,5 +4,13 @@ require_relative "observable_rails/version"
 
 module ObservableRails
   class Error < StandardError; end
-  # Your code goes here...
+
+  class StructuredError < StandardError
+    attr_reader :context
+
+    def initialize(message, context: {})
+      super(message)
+      @context = context
+    end
+  end
 end

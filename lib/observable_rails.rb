@@ -8,8 +8,8 @@ module ObservableRails
   class StructuredError < StandardError
     attr_reader :context
 
-    def initialize(message = nil, context: {})
-      @context = context
+    def initialize(message = nil, context: nil)
+      @context = context || {}
       if message.nil?
         require "awesome_print"
         super(@context.ai(ruby19_syntax: true, plain: true, indent: 2))
